@@ -11,7 +11,7 @@
 		<user_name>Page_2</user_name>
 		<page_flags>4</page_flags>
 		<bit0>
-			<sof_filename>../led_test/led_test_2.sof</sof_filename> 
+			<sof_filename>../MinimigAGA-MiST-TC64/fpga/de0_nano/out/minimig_de0_nano.sof</sof_filename> 
 		</bit0>
 	</sof_data>
 	<sof_data>
@@ -19,7 +19,7 @@
 		<user_name>Page_1</user_name>
 		<page_flags>2</page_flags>
 		<bit0>
-			<sof_filename>../led_test/led_test_1.sof</sof_filename> 
+			<sof_filename>../c64_DeMiSTify/de0nano/output_files/c64_de0nano.sof</sof_filename> 
 		</bit0>
 	</sof_data>
 	<sof_data>
