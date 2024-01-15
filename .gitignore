@@ -1,0 +1,33 @@
+# ignore backup files
+*~
+
+# ignore vi swapfiles
+.*.swp
+
+# ignore some backup files
+*bak
+
+# ignore directories
+db/
+incremental_db/
+greybox_tmp/
+.qsys_edit/
+
+# ignore Quartus work files
+*qws
+*.pof
+*.sof
+*.qws
+*.cdf
+*.rpt
+*.done
+*.fit.smsg
+*.fit.summary
+*.jdi
+*.jic
+*.map
+*.map.smsg
+*.map.summary
+*.pin
+*.sld
+*.sta.summary
