@@ -176,31 +176,33 @@ input 		     [1:0]		GPIO_1_IN;
 wire busy;
 wire reconfig;
 wire write;
-wire [23:0] boot_address;
-wire clk;
+wire [23:0] data;
+wire [2:0] param;
 
 //=======================================================
 //  Structural coding
 //=======================================================
 
-assign boot_address = SW[0] ? 24'hB0000 : 24'h160000;
 assign LED[0] = 1;
 
 remote_update u0 (
 	.busy        (busy),        //        busy.busy
-	.param       (3'b100),       //       param.param
+	.param       (param),       //       param.param
 	.reconfig    (reconfig),    //    reconfig.reconfig
 	.clock       (CLOCK_50),       //       clock.clk
 	.reset       (1'b0),       //       reset.reset
 	.write_param (write), // write_param.write_param
-	.data_in     (boot_address)      //     data_in.data_in
+	.data_in     (data)      //     data_in.data_in
 );
 
 StateMachine s0 (
   .clk(CLOCK_50),
   .busy(busy),
+  .sw(SW[0]),
   .write(write),
-  .reconfig(reconfig)
+  .reconfig(reconfig),
+  .param(param),
+  .data(data)
 );
 
 endmodule
